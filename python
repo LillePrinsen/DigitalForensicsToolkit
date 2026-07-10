@@ -1,0 +1,22 @@
+# setup.py
+from setuptools import setup, find_packages
+
+setup(
+    name="forensic-file-tool",
+    version="0.0.1",
+    author="LilPrince",
+    description="Forensic File Analysis & Editing Tool for legal professionals",
+    packages=find_packages(),
+    install_requires=[
+        'Pillow>=10.0.0',
+        'python-magic-bin>=0.4.14',
+        'PyPDF2>=3.0.0',
+        'pandas>=2.0.0',
+        'pyarrow>=12.0.0',
+    ],
+    entry_points={
+        'console_scripts': [
+            'forensic-tool=forensic_tool:main',
+        ],
+    },
+)
